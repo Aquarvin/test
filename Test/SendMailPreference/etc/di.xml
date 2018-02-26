@@ -1,0 +1,6 @@
+<config>
+    <preference for="Magento\Sales\Block\Adminhtml\Order\View"
+                type="Test\SendMailPreference\Block\Adminhtml\Order\View" />
+    <preference for="Magento\Sales\Controller\Adminhtml\Order\Email"
+                type="Test\SendMailPreference\Controller\Adminhtml\Order\Email" />
+</config>

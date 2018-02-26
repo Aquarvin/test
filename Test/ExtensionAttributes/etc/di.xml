@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Controller\Adminhtml\Product\Builder">
+        <plugin name="get_custom_extension_attribute" type="Test\ExtensionAttributes\Plugin\ProductGet" />
+    </type>
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="save_custom_extension_attribute" type="Test\ExtensionAttributes\Plugin\ProductSave" />
+    </type>
+    <preference for="Test\ExtensionAttributes\Api\ProductCustomAttributeRepositoryInterface"
+                type="Test\ExtensionAttributes\Model\ProductCustomAttributeRepository" />
+    <preference for="Test\ExtensionAttributes\Api\Data\ProductCustomAttributeInterface"
+                type="Test\ExtensionAttributes\Model\ProductCustomAttribute" />
+</config>
